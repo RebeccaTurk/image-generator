@@ -1,3 +1,9 @@
+const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+
+module.exports = {
+    XMLHttpRequest
+};
+
 // const http = require('http');
 // const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 
