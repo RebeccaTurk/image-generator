@@ -5,10 +5,12 @@ request.open("GET", "https://newsapi.org/v2/everything?sources=national-geograph
 request.onload = function () {
     let modalElem;
     let rootElem = document.getElementById("root");
+    let rootInnerElem = document.getElementById("root-inner");
     let modal = document.getElementById("myModal");
     let closeButton = document.getElementsByClassName("close")[0];
     let modalInner = document.getElementById("modal-inner");
     let mountImageHere = document.getElementById("mount-image-here");
+    const getImagesButton = document.getElementById("get-images");
 
     let data = this.response;
     let start = 0;
@@ -25,11 +27,12 @@ request.onload = function () {
                 currImage.src = currUrl;
                 currImage.id = "image" + i;
                 currImage.src = currUrl;
-                rootElem.appendChild(currImage);
+                rootInnerElem.appendChild(currImage);
+                rootElem.appendChild(rootInnerElem);
                 currImage.addEventListener("dblclick", () => {
                     modal.style.display = "block";
                     modalElem = new Image(800);
-                    modalElem.id = "modal" + i;
+                    // modalElem.id = "modal" + i;
                     modalElem.src = currUrl;
                     mountImageHere.appendChild(modalElem);
                 });
@@ -52,8 +55,6 @@ request.onload = function () {
     const initialMount = () => {
         mountImages();
     };
-
-    const getImagesButton = document.getElementById("get-images");
 
     getImagesButton.onclick = () => {
         initialMount();

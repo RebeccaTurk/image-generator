@@ -19,5 +19,9 @@
   "homepage": "https://github.com/RebeccaTurk/image-generator#readme",
   "dependencies": {
     "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   }
 }
