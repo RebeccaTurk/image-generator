@@ -71,7 +71,7 @@ request.onload = function () {
         const dismountImages = () => {
             for (let j = start; j < finish; j++) {
                 let elemToDelete = document.getElementById("image" + j);
-                rootElem.removeChild(elemToDelete);
+                mountImageHere.removeChild(elemToDelete);
             }
         }
         dismountImages();
