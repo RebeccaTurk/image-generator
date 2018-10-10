@@ -1,6 +1,6 @@
-const XMLHttpRequest = import('XMLHttpRequest');
+import xhr from '../server.js';
 
-let request = new XMLHttpRequest();
+let request = new Xhr();
 
 request.open("GET", "https://newsapi.org/v2/everything?sources=national-geographic&apiKey=58314004c9b44065968db4b96c22f504");
 
